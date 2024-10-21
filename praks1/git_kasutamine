@@ -1,0 +1,25 @@
+
+* root kasutajana oleme installinud git:
+apt install git
+
+* edasi tavakasutajana:
+a) seadistame kasutajanime, emaili ja editori
+git config --global user.name "Mihkel"
+git config --global user.email mihkel.lepberg@voco.ee
+git config --global core.editor nano
+
+b) loome kataloogi, kus hakkame skriptima
+mkdir /home/user/skriptimine
+
+c) siseneme tehtud kausta
+cd /home/user/skriptimine
+
+d) tekitame lokaalse repositooriumi git süsteemi jaoks antud kaustas
+got init
+
+remote seadistamine:
+e) git remote add name github:address
+git remote add skriptimine git@github.com:M0hkel/skriptimine.git
+
+f) git remote kontroll
+git remote -v
