@@ -1,0 +1,17 @@
+#!/bin/bash
+# Skript annab teada tänase aasta, kuu, kuupäeva, nädalapäeva ja kellaaja
+
+# Tänane nädalapäev, kuu, kuupäev ja aasta"
+date +"Today is %A, %B %d, %Y"
+# Annab teada praeguse kellaja
+date +"Time is %R"
+# Jätab tühja rea vahe
+echo " "
+# Annab kalendrile pealkirja kuu ja aasta moel
+date +"Calendar of %B %Y"
+# Prindib kalendri kui on alla laetud vastav package
+if dpkg -s ncal &> /dev/null; then
+	cal | tail -n 7
+else
+	echo "ncal is not installed. Please install it to display the calendar"
+fi
