@@ -1,7 +1,4 @@
 #!/bin/bash
 
-# paneb $name võrduma käsuga whoami
-name=$(whoami)
-
 # kirjutab välja tervituse praegusele kasutajale
-echo "Tere, $name !"
+echo "Tere, $(whoami) !"
