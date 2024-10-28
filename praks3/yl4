@@ -1,0 +1,21 @@
+#!/bin/bash
+# Arvutab mitu täis bussi saab antud reisijatega ja mitu reisijat jääb üle
+
+# Küsib reisijate arvu
+echo -n "Sisesta reisijate arv: "
+read reisijad
+
+# Küsib bussi kohtade arvu
+echo -n "Sisesta bussi kohtade arv: "
+read kohad
+
+# Arvutab täis busside arvu
+bussid=$(echo "scale=1;$reisijad/$kohad" | bc)
+t2is_bussid=$(echo "$bussid/1" | bc)
+
+# Arvutab üle jäänud reisijad
+yle_reisijad=$(echo "$reisijad-($t2is_bussid*$kohad)" | bc )
+
+# Annab vastuse
+echo " "
+echo "Täis busse on $t2is_bussid ja maha jäi $yle_reisijad reisijat."
