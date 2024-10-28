@@ -1,0 +1,8 @@
+#!/bin/bash
+
+# Küsib ees- ja perenime
+echo -n "Sisesta oma ees- ja perenimi:"
+# Laseb kasutajal kirjutada eesnime ja perenime
+read eesnimi perenimi
+# Ütleb tagasi vastuse lauses
+echo  "Sinu eesnimi on $eesnimi ja perenimi on $perenimi"
