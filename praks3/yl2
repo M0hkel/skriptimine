@@ -1,7 +1,9 @@
 #!/bin/bash
 
+# muutujate nimekiri
 aasta="2016"
 president="Kersti Kaljulaid"
 lause_keskosa=". aastal valiti Eesti presidendiks "
 
+# muutujatega loodud lause
 echo "$aasta$lause_keskosa$president"
