@@ -1,0 +1,26 @@
+#!/bin/bash
+
+# Küsib isiku vanust
+echo -n "Sisesta oma vanus: "
+read vanus
+
+# Kontrollib kas vanus on 0-11
+if test $vanus -gt 0 -a $vanus -lt 11
+then
+	echo "oled laps"
+# Kontrollib kas vanus on 11-18
+elif test $vanus -ge 11 -a $vanus -lt 18
+then
+	echo "oled nooruk"
+# Kontrollib kas vanus on 18-63
+elif test $vanus -ge 18 -a $vanus -lt 63
+then
+	echo "oled täiskasvanu"
+# Kontrollib kas vanus suurem kui 63
+elif test $vanus -ge 63
+then
+	echo "oled senioor"
+# Kui väärtus pole number siis annab teada, et sisend on vigane
+else
+	echo "vigane sisend"
+fi
