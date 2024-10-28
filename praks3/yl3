@@ -1,0 +1,19 @@
+#!/bin/bash
+
+# Arvutab aine tundide arvu nädalas läbi EAP ja nädalate arvu
+
+# Küsib ainete arvu
+echo "Sisestage ainepunktide arv"
+read ained
+
+# Küsib nädalate arvu
+echo "Sisestage nädalate arv"
+read n2dalad
+
+# Arvutab kogu EAP ajakulu ja jaotab selle nädalate peale ära
+aeg=$(echo "scale=1;($ained*26)/$n2dalad" | bc)
+aeg_ymarda=$(echo "($aeg+0.9)/1" | bc)
+# Vaherida
+echo " "
+# Mitu tundi kulub nädalas
+echo "Nädala ajakulu on $aeg_ymarda tundi"
