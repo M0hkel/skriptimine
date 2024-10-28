@@ -1,0 +1,26 @@
+#!/bin/bash
+
+# Küsib kuu numbrit
+echo -e "Siseta kuu number \c"
+read kuu
+
+# Kontrollib kas väärtus on 1,2 või 12 
+if test $kuu -eq 1 -o $kuu  -eq 2 -o $kuu -eq 12
+then
+	echo "See on talvekuu"
+# Kontrolllib kas väärtus on 3 ja 5 vahel
+elif test $kuu -ge 3 -a $kuu -le 5
+then
+	echo "See on kevadkuu"
+# Kontrollib kas väärtus on 6 ja 8 vahel
+elif test $kuu -ge 6 -a $kuu -le 8
+then
+	echo "See on suvekuu"
+# kontrollib kas väärtus on 9 ja 11 vahel
+elif test $kuu -ge 9 -a $kuu -le 11
+then
+	echo "See on sügiskuu"
+# kui väärtus pole number vahemikus 1-12 siis annab teada
+else
+	echo "sisesta väärtus vahemikus 1-12"
+fi
