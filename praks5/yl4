@@ -1,3 +1,4 @@
+
 #!/bin/bash
 
 # Tervitus vastavalt süsteemi ajale praegusele kasutjale
@@ -20,10 +21,6 @@ elif [ $aeg -ge 18 -a $aeg -lt 22 ]
 then
 	echo "Tere õhtust $nimi!"
 # Kui aeg on 22-24 või 0-6 siis on öö
-elif [ $aeg -ge 22 -a $aeg -lt 24 ] || [ $aeg -ge 0 -a $aeg -lt 6 ]
-then
+else [ $aeg -ge 22 -a $aeg -lt 24 ] || [ $aeg -ge 0 -a $aeg -lt 6 ]
 	echo "Head ööd $nimi!"
-else
-# Kui vastus pole vahemikus 0-23 on vale sisend
-	echo "Vale sisend"
 fi
