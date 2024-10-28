@@ -1,5 +1,7 @@
 #!/bin/bash
 
+# Annab teada mis aastajaga on antud kuul tegemist
+
 # Küsib kuu numbrit
 echo -e "Siseta kuu number \c"
 read kuu
