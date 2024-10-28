@@ -1,0 +1,15 @@
+#!/bin/bash
+
+# Küsib täis arvu
+echo -n "Sisesta suvaline täisarv: "
+read arv
+
+# Arvutab jäägi 2-ga jagades
+j22k=$(( $arv % 2 ))
+# Kui jääk on 0 siis on paaris kui on 1 siis paaritu
+if [ $j22k -eq 0 ]
+then
+	echo "$arv on paaris"
+else
+	echo "$arv on paaritu"
+fi
