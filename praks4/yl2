@@ -1,0 +1,25 @@
+#!/bin/bash
+# Arvutab mitu täis bussi saab antud reisijatega ja mitu reisijat jääb üle
+
+# Küsib reisijate arvu
+echo -n "Sisesta reisijate arv: "
+read reisijad
+
+# Küsib bussi kohtade arvu
+echo -n "Sisesta bussi kohtade arv: "
+read kohad
+
+# Arvutab täis busside arvu
+bussid=$(($reisijad / $kohad))
+# Arvutab üle jäänud reisijad
+yle_reisijad=$(($reisijad - ( $bussid * $kohad)))
+
+# Kui reisijaid on üle rohkem kui 0 siis  lisatakse 1 buss juurde
+if test $yle_reisijad -gt 0
+then
+	bussid=$(($bussid + 1))
+fi
+
+# Annab vastuse
+echo " "
+echo "Kokku on vaja $bussid bussi."
