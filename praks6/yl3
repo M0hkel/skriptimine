@@ -1,0 +1,21 @@
+#!/bin/bash
+
+echo -e "Sisesta kuu number \c"
+read kuu
+
+case $kuu in
+	"1") echo "jaanuar";;
+	"2") echo "veebruar";;
+	"3") echo "märts";;
+	"4") echo "aprill";;
+	"5") echo "mai";;
+	"6") echo "juuni";;
+	"7") echo "juuli";;
+	"8") echo "august";;
+	"9") echo "september";;
+	"10") echo "oktoober";;
+	"11") echo "november";;
+	"12") echo "detsember";;
+	*) echo "Palun sisesta number 1 kuni 12";;
+esac
+
