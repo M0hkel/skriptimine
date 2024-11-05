@@ -1,0 +1,21 @@
+#!/bin/bash
+
+# kusib kasutajalt arvu ja teeb sellest variable
+echo -e "Sisesta täisarv"
+read arv
+
+# algsumma millele arvud juurde liidetakse
+summa=0
+
+# seni kaua kui arv ei ole 0 korda all olevaid kaske
+while [ $arv -ne 0 ]
+do
+	# lahutab arvust 10 kuniks ta 10-ga enam ei jagune ja teeb jaagist var
+	jaak=$(($arv % 10))
+	# liidab jaagi summale 
+	summa=$(($summa + $jaak))
+	# jagav arvu 10 ja umardab all ja alustab uuesti while
+	arv=$(($arv / 10))
+done
+# lopp summa
+echo "antud arvu numbrite summa on $summa"
