@@ -1,0 +1,21 @@
+#!/bin/bash
+
+# liidab kokku paarisarvud esimese 10 arvu seas
+
+# algsumma on 0 millele liidedakse arvud juurde
+summa=0
+# kordab allolevat skripti labi koik arvud 1, kuni 10
+for (( arv=1; arv<11; arv++ ))
+do
+# loendist voetud arv jagadakse 2 nii palju kui saab
+	jaak=$(($arv % 2))
+# kui lopp vastus on 0 siis oli paaris arv
+	if [ $jaak -eq 0 ]; then
+# kui arv oli paaris, liidetakse juurde ta summale juurde 
+		summa=$(($summa + $arv))
+# annab teada praeguse summa
+		echo $summa
+	fi
+done
+# lopp summa
+echo "Vahemikus 1-10 paarisarvude summa on : $summa"
