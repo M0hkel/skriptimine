@@ -1,8 +1,10 @@
 #!/bin/bash
 
+# Küsib kasutajalt kuu numbrit ja teeb tast var
 echo -e "Sisesta kuu number \c"
 read kuu
 
+# Vastavalt sisestatud numbrile annab vastava kuu
 case $kuu in
 	"1") echo "jaanuar";;
 	"2") echo "veebruar";;
@@ -16,6 +18,7 @@ case $kuu in
 	"10") echo "oktoober";;
 	"11") echo "november";;
 	"12") echo "detsember";;
+	# Kui number pole nimerkirjas palub sisestada numbri vahemikus 1-12
 	*) echo "Palun sisesta number 1 kuni 12";;
 esac
 
